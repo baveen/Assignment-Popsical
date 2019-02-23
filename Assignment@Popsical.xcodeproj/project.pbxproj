@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		007B7BD461332213B01F4A9B /* Pods_Assignment_Popsical.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE59851EF4F591A9192146B /* Pods_Assignment_Popsical.framework */; };
 		C68ED7662220F8E300219D46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68ED7652220F8E300219D46 /* AppDelegate.swift */; };
 		C68ED7682220F8E300219D46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68ED7672220F8E300219D46 /* ViewController.swift */; };
 		C68ED76B2220F8E300219D46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C68ED7692220F8E300219D46 /* Main.storyboard */; };
 		C68ED76D2220F8E400219D46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C68ED76C2220F8E400219D46 /* Assets.xcassets */; };
 		C68ED7702220F8E400219D46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C68ED76E2220F8E400219D46 /* LaunchScreen.storyboard */; };
-		C68ED77B2220F8E400219D46 /* Assignment_PopsicalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68ED77A2220F8E400219D46 /* Assignment_PopsicalTests.swift */; };
+		C68ED7882220FB1E00219D46 /* SongsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68ED7872220FB1E00219D46 /* SongsCell.swift */; };
+		C68ED78B2220FDBC00219D46 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68ED7892220FDBC00219D46 /* Track.swift */; };
+		C68ED78C2220FDBC00219D46 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68ED78A2220FDBC00219D46 /* Artist.swift */; };
+		C68ED78E2220FF9300219D46 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68ED78D2220FF9300219D46 /* WebServiceManager.swift */; };
+		D0A451BB5B40905832939692 /* Pods_Assignment_PopsicalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBABA11D664D1E3A3BC6D63 /* Pods_Assignment_PopsicalTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +31,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DE59851EF4F591A9192146B /* Pods_Assignment_Popsical.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Assignment_Popsical.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EFC18B69A10D39DB583703E /* Pods-Assignment@PopsicalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assignment@PopsicalTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Assignment@PopsicalTests/Pods-Assignment@PopsicalTests.release.xcconfig"; sourceTree = "<group>"; };
+		731DB696E44B6159232AB508 /* Pods-Assignment@PopsicalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assignment@PopsicalTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Assignment@PopsicalTests/Pods-Assignment@PopsicalTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A1993C29748D6F4914F0F52F /* Pods-Assignment@Popsical.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assignment@Popsical.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Assignment@Popsical/Pods-Assignment@Popsical.debug.xcconfig"; sourceTree = "<group>"; };
+		A2CF1DFFEFBD976B6BD673AD /* Pods-Assignment@Popsical.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assignment@Popsical.release.xcconfig"; path = "Pods/Target Support Files/Pods-Assignment@Popsical/Pods-Assignment@Popsical.release.xcconfig"; sourceTree = "<group>"; };
+		BBBABA11D664D1E3A3BC6D63 /* Pods_Assignment_PopsicalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Assignment_PopsicalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68ED7622220F8E300219D46 /* Assignment@Popsical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Assignment@Popsical.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68ED7652220F8E300219D46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C68ED7672220F8E300219D46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,8 +45,10 @@
 		C68ED76F2220F8E400219D46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C68ED7712220F8E400219D46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C68ED7762220F8E400219D46 /* Assignment@PopsicalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Assignment@PopsicalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C68ED77A2220F8E400219D46 /* Assignment_PopsicalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment_PopsicalTests.swift; sourceTree = "<group>"; };
-		C68ED77C2220F8E400219D46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C68ED7872220FB1E00219D46 /* SongsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsCell.swift; sourceTree = "<group>"; };
+		C68ED7892220FDBC00219D46 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		C68ED78A2220FDBC00219D46 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		C68ED78D2220FF9300219D46 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				007B7BD461332213B01F4A9B /* Pods_Assignment_Popsical.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +64,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0A451BB5B40905832939692 /* Pods_Assignment_PopsicalTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E1809671AD32B5FFA2A91F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1993C29748D6F4914F0F52F /* Pods-Assignment@Popsical.debug.xcconfig */,
+				A2CF1DFFEFBD976B6BD673AD /* Pods-Assignment@Popsical.release.xcconfig */,
+				731DB696E44B6159232AB508 /* Pods-Assignment@PopsicalTests.debug.xcconfig */,
+				4EFC18B69A10D39DB583703E /* Pods-Assignment@PopsicalTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C68ED7592220F8E300219D46 = {
 			isa = PBXGroup;
 			children = (
 				C68ED7642220F8E300219D46 /* Assignment@Popsical */,
-				C68ED7792220F8E400219D46 /* Assignment@PopsicalTests */,
 				C68ED7632220F8E300219D46 /* Products */,
+				1E1809671AD32B5FFA2A91F6 /* Pods */,
+				F63DD8C69F68A8D4EA1BA138 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,23 +104,27 @@
 		C68ED7642220F8E300219D46 /* Assignment@Popsical */ = {
 			isa = PBXGroup;
 			children = (
+				C68ED78A2220FDBC00219D46 /* Artist.swift */,
+				C68ED7892220FDBC00219D46 /* Track.swift */,
 				C68ED7652220F8E300219D46 /* AppDelegate.swift */,
 				C68ED7672220F8E300219D46 /* ViewController.swift */,
 				C68ED7692220F8E300219D46 /* Main.storyboard */,
 				C68ED76C2220F8E400219D46 /* Assets.xcassets */,
 				C68ED76E2220F8E400219D46 /* LaunchScreen.storyboard */,
 				C68ED7712220F8E400219D46 /* Info.plist */,
+				C68ED7872220FB1E00219D46 /* SongsCell.swift */,
+				C68ED78D2220FF9300219D46 /* WebServiceManager.swift */,
 			);
 			path = "Assignment@Popsical";
 			sourceTree = "<group>";
 		};
-		C68ED7792220F8E400219D46 /* Assignment@PopsicalTests */ = {
+		F63DD8C69F68A8D4EA1BA138 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C68ED77A2220F8E400219D46 /* Assignment_PopsicalTests.swift */,
-				C68ED77C2220F8E400219D46 /* Info.plist */,
+				1DE59851EF4F591A9192146B /* Pods_Assignment_Popsical.framework */,
+				BBBABA11D664D1E3A3BC6D63 /* Pods_Assignment_PopsicalTests.framework */,
 			);
-			path = "Assignment@PopsicalTests";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C68ED77F2220F8E400219D46 /* Build configuration list for PBXNativeTarget "Assignment@Popsical" */;
 			buildPhases = (
+				96A1D26228CE01BB92F8540E /* [CP] Check Pods Manifest.lock */,
 				C68ED75E2220F8E300219D46 /* Sources */,
 				C68ED75F2220F8E300219D46 /* Frameworks */,
 				C68ED7602220F8E300219D46 /* Resources */,
+				C77233AEFA76893D4D055AE9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +153,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C68ED7822220F8E400219D46 /* Build configuration list for PBXNativeTarget "Assignment@PopsicalTests" */;
 			buildPhases = (
+				4B8633B3143573F0424FE251 /* [CP] Check Pods Manifest.lock */,
 				C68ED7722220F8E400219D46 /* Sources */,
 				C68ED7732220F8E400219D46 /* Frameworks */,
 				C68ED7742220F8E400219D46 /* Resources */,
@@ -192,6 +226,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4B8633B3143573F0424FE251 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Assignment@PopsicalTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96A1D26228CE01BB92F8540E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Assignment@Popsical-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C77233AEFA76893D4D055AE9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Assignment@Popsical/Pods-Assignment@Popsical-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Assignment@Popsical/Pods-Assignment@Popsical-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C68ED75E2220F8E300219D46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -199,6 +304,10 @@
 			files = (
 				C68ED7682220F8E300219D46 /* ViewController.swift in Sources */,
 				C68ED7662220F8E300219D46 /* AppDelegate.swift in Sources */,
+				C68ED78E2220FF9300219D46 /* WebServiceManager.swift in Sources */,
+				C68ED7882220FB1E00219D46 /* SongsCell.swift in Sources */,
+				C68ED78C2220FDBC00219D46 /* Artist.swift in Sources */,
+				C68ED78B2220FDBC00219D46 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +315,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C68ED77B2220F8E400219D46 /* Assignment_PopsicalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +466,7 @@
 		};
 		C68ED7802220F8E400219D46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1993C29748D6F4914F0F52F /* Pods-Assignment@Popsical.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +485,7 @@
 		};
 		C68ED7812220F8E400219D46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2CF1DFFEFBD976B6BD673AD /* Pods-Assignment@Popsical.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,6 +504,7 @@
 		};
 		C68ED7832220F8E400219D46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 731DB696E44B6159232AB508 /* Pods-Assignment@PopsicalTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +526,7 @@
 		};
 		C68ED7842220F8E400219D46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EFC18B69A10D39DB583703E /* Pods-Assignment@PopsicalTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
