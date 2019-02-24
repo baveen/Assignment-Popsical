@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         
         let alertController = UIAlertController(title: "Error!", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default) { (action) in
-            self.songsTableView.isHidden = true
+            //self.songsTableView.isHidden = true
         }
         alertController.addAction(action)
         self.present(alertController, animated: false, completion: nil)
@@ -123,13 +123,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, UISearchBa
         
         WebServiceManager.sharedInstance.pageNumber += 1
         WebServiceManager.sharedInstance.fetchSongDetails(forPage:WebServiceManager.sharedInstance.pageNumber, completionBlock: {[weak self] (songs) in
+            
             self?.tracks.append(contentsOf: songs)
             DispatchQueue.main.async {
                 self?.songsTableView.reloadData()
             }
-            }, errorBlock: {
-                error in
-                print(error?.localizedDescription)
+
+            }, errorBlock: {[weak self] error in
+                
+                if let desc = error?.localizedDescription {
+                    self?.displayAlert(with: desc)
+                    self?.loadSongs()
+                }
+                
         })
         
     }

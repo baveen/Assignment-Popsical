@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PINCache
 
 class SongsCell: UITableViewCell {
     
@@ -87,11 +86,14 @@ class SongsCell: UITableViewCell {
     
     func updateCell(with track: Track, at cell: SongsCell) {
         
-        cell.trackNameLabel.text = "Track Name: \(track.title!)"
+        cell.trackNameLabel.text = "Track: \(track.title!)"
+        if let artistName = track.trackArtists[0]?.artist?.name{
+            cell.artistNameLabel.text = "Artist: \(artistName)"
+        }
         
         DispatchQueue.global().async {[weak self] in
             
-            if let urlString = track.imageURL {
+            if let urlString = track.images?["poster"]?["url"] {
                 if let url = URL(string: urlString) {
                     if let data = try? Data(contentsOf: url) {
                         if let image = UIImage(data: data) {

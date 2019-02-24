@@ -9,7 +9,7 @@ target 'Assignment@Popsical' do
 
 	pod 'Alamofire'
 	pod 'SwiftyJSON'
-    pod 'PINCache'
+    
   target 'Assignment@PopsicalTests' do
     inherit! :search_paths
     # Pods for testing

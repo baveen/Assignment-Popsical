@@ -19,7 +19,6 @@ class WebServiceManager {
     
     func fetchSongDetails(forPage pageNum: Int, completionBlock: @escaping (_ songs: [Track]) -> Void, errorBlock: @escaping (_ error: Error?) -> Void) {
         
-        var trackArray = [Track]()
         let url = URL(string: "\(dataSourceURL)\(pageNum)")
         
         Alamofire.request(url!,
@@ -30,32 +29,20 @@ class WebServiceManager {
                     return errorBlock(response.error)
                 }
                 
-                let parsedJson = JSON(response.result.value!)
-                for (_,jsonObj):(String,JSON) in parsedJson["tracks"] {
-                    
-                    let releaseDate: Date?
-                    if let rldate = self.dateFromString(dateStr: jsonObj["release_date"].stringValue) {
-                        releaseDate = rldate
-                    }else {
-                        releaseDate = nil
-                    }
-                    
-                    let track = Track(id: jsonObj["id"].intValue, number:jsonObj["number"].stringValue, title:jsonObj["title"].stringValue, altTitle:jsonObj["alt_title"].stringValue, runTime:jsonObj["run_time"].intValue, releaseDate:releaseDate, source:jsonObj["source"].stringValue, imageURL:jsonObj["images"]["poster"]["url"].stringValue)
-                    
-                    trackArray.append(track)
-                    
+                guard response.result.isSuccess else {
+                    return
                 }
-                //self.songsArray += trackArray
-                completionBlock(trackArray)
+                
+                do {
+                    let jsonData = response.data!
+                    let res = try JSONDecoder().decode(SongsResponse.self, from: jsonData)
+                    completionBlock(res.tracks)
+
+                }
+                catch {
+                    errorBlock(error)
+                }
         }
-        
-    }
-    
-    func dateFromString(dateStr: String) -> Date? {
-        
-        let dateFor: DateFormatter = DateFormatter()
-        dateFor.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-        return dateFor.date(from: dateStr) ?? nil
         
     }
     
