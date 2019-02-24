@@ -14,11 +14,12 @@ class WebServiceManager {
     
     private let dataSourceURL = "https://api-staging.popsical.tv/v3/songs.json?page="
     static let sharedInstance = WebServiceManager()
-    var pageNumber = 1
+    var pageNumber = 0
+   // private var songsArray: [Track] = []
     
     func fetchSongDetails(forPage pageNum: Int, completionBlock: @escaping (_ songs: [Track]) -> Void, errorBlock: @escaping (_ error: Error?) -> Void) {
         
-        var songsArray: [Track] = []
+        var trackArray = [Track]()
         let url = URL(string: "\(dataSourceURL)\(pageNum)")
         
         Alamofire.request(url!,
@@ -41,11 +42,11 @@ class WebServiceManager {
                     
                     let track = Track(id: jsonObj["id"].intValue, number:jsonObj["number"].stringValue, title:jsonObj["title"].stringValue, altTitle:jsonObj["alt_title"].stringValue, runTime:jsonObj["run_time"].intValue, releaseDate:releaseDate, source:jsonObj["source"].stringValue, imageURL:jsonObj["images"]["poster"]["url"].stringValue)
                     
-                    songsArray.append(track)
+                    trackArray.append(track)
                     
                 }
-                
-                completionBlock(songsArray)
+                //self.songsArray += trackArray
+                completionBlock(trackArray)
         }
         
     }

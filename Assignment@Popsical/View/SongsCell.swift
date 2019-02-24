@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import PINCache
 
 class SongsCell: UITableViewCell {
-
+    
     var trackImageView: UIImageView = {
         let imv = UIImageView()
         imv.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
@@ -91,32 +92,27 @@ class SongsCell: UITableViewCell {
         DispatchQueue.global().async {[weak self] in
             
             if let urlString = track.imageURL {
-                
                 if let url = URL(string: urlString) {
                     if let data = try? Data(contentsOf: url) {
-                        let image = UIImage(data: data)
-                        
-                        DispatchQueue.main.async {
-                            self?.trackImageView.image = image
+                        if let image = UIImage(data: data) {
+                            DispatchQueue.main.async {
+                                self?.trackImageView.image = image
+                            }
                         }
-                    }else {
-//                        DispatchQueue.main.async {
-//                            self?.trackImageView.image = image
-//                        }
-
                     }
-                
+                }
             }
-           
+            
         }
+        
     }
-}
     
     
     func customize(label: UILabel) {
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 12)
     }
-
-
+    
+    
 }
+

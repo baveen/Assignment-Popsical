@@ -17,6 +17,7 @@
 		C68ED78B2220FDBC00219D46 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68ED7892220FDBC00219D46 /* Track.swift */; };
 		C68ED78C2220FDBC00219D46 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68ED78A2220FDBC00219D46 /* Artist.swift */; };
 		C68ED78E2220FF9300219D46 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68ED78D2220FF9300219D46 /* WebServiceManager.swift */; };
+		C68ED7902221229700219D46 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68ED78F2221229700219D46 /* LoadingCell.swift */; };
 		D0A451BB5B40905832939692 /* Pods_Assignment_PopsicalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBABA11D664D1E3A3BC6D63 /* Pods_Assignment_PopsicalTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		C68ED7892220FDBC00219D46 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		C68ED78A2220FDBC00219D46 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		C68ED78D2220FF9300219D46 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
+		C68ED78F2221229700219D46 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,18 +106,43 @@
 		C68ED7642220F8E300219D46 /* Assignment@Popsical */ = {
 			isa = PBXGroup;
 			children = (
-				C68ED78A2220FDBC00219D46 /* Artist.swift */,
-				C68ED7892220FDBC00219D46 /* Track.swift */,
+				C6DD690D2222564400D6493F /* Controllers */,
+				C6DD690B2222563100D6493F /* View */,
+				C6DD690A2222561900D6493F /* Model */,
 				C68ED7652220F8E300219D46 /* AppDelegate.swift */,
-				C68ED7672220F8E300219D46 /* ViewController.swift */,
 				C68ED7692220F8E300219D46 /* Main.storyboard */,
 				C68ED76C2220F8E400219D46 /* Assets.xcassets */,
 				C68ED76E2220F8E400219D46 /* LaunchScreen.storyboard */,
 				C68ED7712220F8E400219D46 /* Info.plist */,
-				C68ED7872220FB1E00219D46 /* SongsCell.swift */,
-				C68ED78D2220FF9300219D46 /* WebServiceManager.swift */,
 			);
 			path = "Assignment@Popsical";
+			sourceTree = "<group>";
+		};
+		C6DD690A2222561900D6493F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C68ED78A2220FDBC00219D46 /* Artist.swift */,
+				C68ED7892220FDBC00219D46 /* Track.swift */,
+				C68ED78D2220FF9300219D46 /* WebServiceManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C6DD690B2222563100D6493F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C68ED7872220FB1E00219D46 /* SongsCell.swift */,
+				C68ED78F2221229700219D46 /* LoadingCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C6DD690D2222564400D6493F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C68ED7672220F8E300219D46 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		F63DD8C69F68A8D4EA1BA138 /* Frameworks */ = {
@@ -281,6 +308,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Assignment@Popsical/Pods-Assignment@Popsical-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -288,6 +316,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +335,7 @@
 				C68ED7662220F8E300219D46 /* AppDelegate.swift in Sources */,
 				C68ED78E2220FF9300219D46 /* WebServiceManager.swift in Sources */,
 				C68ED7882220FB1E00219D46 /* SongsCell.swift in Sources */,
+				C68ED7902221229700219D46 /* LoadingCell.swift in Sources */,
 				C68ED78C2220FDBC00219D46 /* Artist.swift in Sources */,
 				C68ED78B2220FDBC00219D46 /* Track.swift in Sources */,
 			);
