@@ -8,29 +8,22 @@
 
 import Foundation
 import Alamofire
-import SwiftyJSON
 
 class WebServiceManager {
     
     private let dataSourceURL = "https://api-staging.popsical.tv/v3/songs.json?page="
     static let sharedInstance = WebServiceManager()
     var pageNumber = 0
-   // private var songsArray: [Track] = []
     
     func fetchSongDetails(forPage pageNum: Int, completionBlock: @escaping (_ songs: [Track]) -> Void, errorBlock: @escaping (_ error: Error?) -> Void) {
         
         let url = URL(string: "\(dataSourceURL)\(pageNum)")
         
-        Alamofire.request(url!,
-                          method: .get)
+        Alamofire.request(url!, method: .get)
             .validate()
             .responseJSON { response in
                 guard response.result.isSuccess else {
                     return errorBlock(response.error)
-                }
-                
-                guard response.result.isSuccess else {
-                    return
                 }
                 
                 do {

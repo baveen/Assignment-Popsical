@@ -8,7 +8,6 @@ target 'Assignment@Popsical' do
   # Pods for Assignment@Popsical
 
 	pod 'Alamofire'
-	pod 'SwiftyJSON'
     
   target 'Assignment@PopsicalTests' do
     inherit! :search_paths
